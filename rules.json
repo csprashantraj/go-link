@@ -1,0 +1,56 @@
+{
+  "escape_keyword": "nofind",
+  "default_search": "https://www.google.com/search?q={q}",
+  "rules": {
+    "gmail": {
+      "type": "template",
+      "arg_defaults": ["0", "inbox"],
+      "template": "https://mail.google.com/mail/u/{0}/#{1}"
+    },
+    "yt": {
+      "type": "template",
+      "arg_defaults": [""],
+      "template": "https://www.youtube.com/results?search_query={0}"
+    },
+    "claude": {
+        "type": "static",
+        "url": "https://claude.ai/new/"
+    },
+    "mylinkedin": {
+        "type": "static",
+        "url": "https://www.linkedin.com/in/csprashantraj/"
+    },
+    "linkedin": {
+        "type": "static",
+        "url": "https://www.linkedin.com/feed/"
+    },
+    "mscareers": {
+        "type": "static",
+        "url": "https://apply.careers.microsoft.com/careers/dashboardv2"
+    },
+    "googlecareers": {
+        "type": "static",
+        "url": "https://www.google.com/about/careers/applications"
+    },
+    "smile": {
+        "type": "static",
+        "url": "https://erp.nitw.ac.in/erp/login"
+    },
+    "mygh": {
+      "type": "static",
+      "url": "https://github.com/csprashantraj"
+    },
+    "gh": {
+      "type": "static",
+      "url": "https://github.com"
+    },
+    "gpt": {
+        "type": "static",
+        "url": "https://chat.openai.com/chat"
+    },
+    "reddit": {
+        "type": "static",
+        "url" : "https://www.reddit.com/"
+    }
+  }
+}
