@@ -9,6 +9,7 @@
     },
     "yt": {
       "type": "template",
+      "join_args": true,
       "arg_defaults": [""],
       "template": "https://www.youtube.com/results?search_query={0}"
     },

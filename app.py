@@ -55,6 +55,7 @@ def build_default_search_url(query):
 
 def build_rule_url(rule, args):
     rule_type = rule.get("type")
+    join_args = rule.get("join_args", False)
 
     if rule_type == "static":
         url = rule.get("url")
@@ -70,6 +71,11 @@ def build_rule_url(rule, args):
             raise ValueError("Invalid template rule")
         if not isinstance(arg_defaults, list):
             raise ValueError("Invalid arg_defaults")
+        if not isinstance(join_args, bool):
+            raise ValueError("Invalid join_args")
+
+        if join_args:
+            args = [quote_plus(" ".join(args))]
 
         formatter = string.Formatter()
         max_index = -1
